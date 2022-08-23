@@ -11,9 +11,12 @@ import Brightness3Icon from "@mui/icons-material/Brightness3";
 import PersonIcon from "@mui/icons-material/Person";
 import AntSwitch from "../Switch/Switch";
 import Stack from "@mui/material/Stack";
-import { Icon } from "@mui/material";
+import { useRouter } from "next/router";
 
 export default function HomeHeader({ theme, toggleTheme }: any) {
+   const { pathname } = useRouter();
+   console.log(pathname);
+
    return (
       <Box sx={{ flexGrow: 1 }}>
          <AppBar
@@ -27,10 +30,28 @@ export default function HomeHeader({ theme, toggleTheme }: any) {
             }}
          >
             <Toolbar>
-               <Typography variant="h6" sx={{ mr: 5, fontSize: 16 }}>
+               <Typography
+                  variant="h6"
+                  sx={{
+                     "& a": {
+                        color: pathname == "/about-us" ? "#187DF1" : "black",
+                     },
+                     mr: 5,
+                     fontSize: 16,
+                  }}
+               >
                   <Link href="/about-us">درباره ما</Link>
                </Typography>
-               <Typography variant="h6" sx={{ mr: 5, fontSize: 16 }}>
+               <Typography
+                  variant="h6"
+                  sx={{
+                     "& a": {
+                        color: pathname == "/" ? "#187DF1" : "black",
+                     },
+                     mr: 5,
+                     fontSize: 16,
+                  }}
+               >
                   <Link href="/">صفحه نخست</Link>
                </Typography>
                <Stack

@@ -13,7 +13,7 @@ export default function HomeMedia() {
             sx={{
                display: "block",
                mt: 5,
-               minHeight: "517px"
+               minHeight: "517px",
             }}
          >
             <img
