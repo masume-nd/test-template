@@ -22,7 +22,7 @@ const clientSideEmotionCache = createEmotionCache();
 
 // const lightTheme = createTheme(getDesignTokens("light"));
 
-const MyApp: React.FunctionComponent<MyAppProps> = (props) => {
+const MyApp: React.FC<MyAppProps> = (props) => {
    const [mode, setMode] = React.useState<PaletteMode>("light");
    const colorMode = React.useMemo(
       () => ({

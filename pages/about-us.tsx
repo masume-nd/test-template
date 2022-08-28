@@ -6,7 +6,6 @@ import Button from "../components/Button/Button";
 import Link from "next/link";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 import Skeleton from "@mui/material/Skeleton";
-import { fontWeight } from "@mui/system";
 export default function AboutUs() {
    const [imageLoaded, setImageLoaded] = useState(false);
    useEffect(() => {

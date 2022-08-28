@@ -4,7 +4,6 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "../Button/Button";
-import IconButton from "@mui/material/IconButton";
 import Link from "next/link";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import Brightness3Icon from "@mui/icons-material/Brightness3";
@@ -91,17 +90,18 @@ export default function HomeHeader({ theme, toggleTheme }: any) {
                      }}
                   />
                </Stack>
+
                <Typography variant="button">
-                  <Button sx={{ px: 6 }} variant="contained">
-                     ورود
-                  </Button>
-               </Typography>
-               <Typography variant="button">
-                  <Button variant="outlined" sx={{ mr: 2, px: 4 }}>
+                  <Button variant="outlined" sx={{ ml: 2, px: 4 }}>
                      <PersonIcon
                         sx={{ width: "13.33px", height: "13.33px", ml: "5px" }}
                      />
                      ثبت نام
+                  </Button>
+               </Typography>
+               <Typography variant="button">
+                  <Button sx={{ px: 6, boxShadow: 0 }} variant="contained">
+                     ورود
                   </Button>
                </Typography>
             </Toolbar>

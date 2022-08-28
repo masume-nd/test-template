@@ -1,10 +1,10 @@
 import React from "react";
 import Box from "@mui/material/Box";
-import Image from "next/image";
 import Typography from "@mui/material/Typography";
 import Button from "../Button/Button";
 import Link from "next/link";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
+import Image from "next/image";
 
 export default function HomeMedia() {
    return (
@@ -16,7 +16,15 @@ export default function HomeMedia() {
                minHeight: "517px",
             }}
          >
-            <img
+            <Image
+               src="https://picsum.photos/1000/600"
+               width="956"
+               height="517"
+               style={{
+                  borderRadius: 20,
+               }}
+            />
+            {/* <img
                style={{
                   borderRadius: 20,
                   width: "100%",
@@ -24,8 +32,7 @@ export default function HomeMedia() {
                   objectFit: "cover",
                }}
                src="https://picsum.photos/1000/600"
-            />
-           
+            /> */}
          </Box>
          <Box sx={{ mt: 2 }}>
             <Typography
@@ -43,7 +50,7 @@ export default function HomeMedia() {
                ساحل هنوز به عنوان یک مقصد گردشگری بین المللی چندان مشهور نشده
                است ، که به بازدیدکنندگانش مکانی برای لذت بردن می دهد.
             </Typography>
-            <Box sx={{ m: "auto", width: "200px", mt: 2 }}>
+            <Box sx={{ m: "auto", width: "200px", mt: 8, mb:6, textAlign:"center" }}>
                <Link href="/about-us">
                   <Button variant="contained" sx={{ px: 4 }}>
                      درباره ما
